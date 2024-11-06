@@ -3,7 +3,7 @@ import calendar
 from calendar import HTMLCalendar
 from datetime import datetime
 
-def home(request, month, year):
+def home(request, month=datetime.now().strftime('%B'), year=datetime.now().year):
     name = "Brethren"
     month = month.title() #To allow lowercase or uppercase (capitalize will also work)
     # Convert month from name to number
